@@ -1,1 +1,1 @@
-Write-Output "Test"
+Start-Process wordpad
