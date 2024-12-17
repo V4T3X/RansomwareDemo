@@ -1,16 +1,16 @@
-﻿using System;
+using System;
 using System.Windows.Forms;
 
-namespace UnclosableWindow
+namespace Decrypter
 {
-    public class MainForm : Form
+    public class Program : Form
     {
-        public MainForm()
+        public Program()
         {
             // Fenster-Eigenschaften
             this.Text = "Decrypter 1.0";                            // Fenstertitel
-            this.Width = 1000;                                      // Fensterbreite
-            this.Height = 700;                                      // Fensterhöhe
+            this.Width = 1300;                                      // Fensterbreite
+            this.Height = 900;                                      // Fensterhöhe
             this.StartPosition = FormStartPosition.CenterScreen;    // Zentriert starten
             this.FormBorderStyle = FormBorderStyle.FixedDialog;     // Fixierte Größe
             this.ControlBox = false;                                // Entfernt die "X"-Schließen-Schaltfläche
@@ -47,12 +47,27 @@ namespace UnclosableWindow
             MessageBox.Show("You can not close this window!", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
+        // Avoids Movement
+        protected override void WndProc(ref Message m)
+        {
+            const int WM_NCLBUTTONDOWN = 0xA1; 
+            const int HTCAPTION = 0x2;       
+            
+            
+            if (m.Msg == WM_NCLBUTTONDOWN && m.WParam.ToInt32() == HTCAPTION)
+            {
+                return;
+            }
+
+            base.WndProc(ref m);
+        }
+
         [STAThread]
         public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new Program());
         }
     }
 }

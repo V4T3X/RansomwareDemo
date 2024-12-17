@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marco\\Desktop\\RansomwareDemo\\Decrypter\\Decrypter.csproj",
+      "projectUniqueName": "C:\\Users\\Marco\\Desktop\\Uni\\Fraunhofer\\RansomwareDemo\\Decrypter\\Decrypter.csproj",
       "projectName": "Decrypter",
-      "projectPath": "C:\\Users\\Marco\\Desktop\\RansomwareDemo\\Decrypter\\Decrypter.csproj",
+      "projectPath": "C:\\Users\\Marco\\Desktop\\Uni\\Fraunhofer\\RansomwareDemo\\Decrypter\\Decrypter.csproj",
       "packagesPath": "C:\\Users\\Marco\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marco\\Desktop\\RansomwareDemo\\Decrypter\\obj\\",
+      "outputPath": "C:\\Users\\Marco\\Desktop\\Uni\\Fraunhofer\\RansomwareDemo\\Decrypter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Marco\\AppData\\Roaming\\NuGet\\NuGet.Config"
