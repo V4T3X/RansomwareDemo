@@ -1,0 +1,13 @@
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\bin\Release\net9.0-windows\win-x64\Decrypter.exe
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\bin\Release\net9.0-windows\win-x64\Decrypter.deps.json
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\bin\Release\net9.0-windows\win-x64\Decrypter.runtimeconfig.json
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\bin\Release\net9.0-windows\win-x64\Decrypter.dll
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\obj\Release\net9.0-windows\win-x64\Decrypter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\obj\Release\net9.0-windows\win-x64\Decrypter.AssemblyInfoInputs.cache
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\obj\Release\net9.0-windows\win-x64\Decrypter.AssemblyInfo.cs
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\obj\Release\net9.0-windows\win-x64\Decrypter.csproj.CoreCompileInputs.cache
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\obj\Release\net9.0-windows\win-x64\Decrypter.sourcelink.json
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\obj\Release\net9.0-windows\win-x64\Decrypter.dll
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\obj\Release\net9.0-windows\win-x64\refint\Decrypter.dll
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\obj\Release\net9.0-windows\win-x64\Decrypter.genruntimeconfig.cache
+C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\obj\Release\net9.0-windows\win-x64\ref\Decrypter.dll

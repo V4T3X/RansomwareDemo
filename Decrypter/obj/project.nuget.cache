@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "r6InuOxhUBQ=",
+  "dgSpecHash": "9tIrEFVz5Lc=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marco\\Desktop\\Uni\\Fraunhofer\\RansomwareDemo\\Decrypter\\Decrypter.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Marco\\Desktop\\RansomwareDemo\\Decrypter\\Decrypter.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Marco\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.0\\microsoft.net.illink.tasks.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
