@@ -1,8 +1,12 @@
-#Changes Background  
+# Token
+$token = "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"
+$headers = @{ Authorization = "token $token" }
+
+# Changes Background  
 $url = "https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg"
 
 
-Invoke-WebRequest $url -OutFile C:\Windows\Temp\black.jpg
+Invoke-WebRequest $url -OutFile C:\Windows\Temp\black.jpg 
 
 
 $setwallpapersrc = @"
