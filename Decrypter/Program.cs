@@ -24,6 +24,20 @@ namespace Decrypter
             this.TopMost = true;                                    // Fenster immer im Vordergrund halten
             // this.ShowInTaskbar = false;                             // Fenster nicht in der Taskleiste anzeigen
 
+            // Background
+            string backround1Name = "Decrypter.img.background1.png";
+            using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(backround1Name))
+            {
+                if (stream != null)
+                {
+                    this.BackgroundImage = Image.FromStream(stream);
+                    this.BackgroundImageLayout = ImageLayout.Stretch;
+                }
+                else
+                {
+                    MessageBox.Show("Resource not found");
+                }
+            }
 
             // Window Text
             Label lblInfo = new Label();
@@ -34,18 +48,19 @@ namespace Decrypter
             lblInfo.TextAlign = ContentAlignment.MiddleCenter;
             this.Controls.Add(lblInfo);
 
-            // PictureBox
+            // PictureBox (lock)
             PictureBox pictureBox = new PictureBox
             {
-                Size = new Size(150, 200),
-                Location = new Point(25, 25),
+                Size = new Size(170, 230),
+                Location = new Point(100, 5),
                 BorderStyle = BorderStyle.None,
-                SizeMode = PictureBoxSizeMode.Zoom
+                SizeMode = PictureBoxSizeMode.Zoom,
+                BackColor = Color.Transparent
             };
 
             
             // Bild aus Ressource laden
-            string resourceName = "Decrypter.img.lock.png";
+            string resourceName = "Decrypter.img.unlock.png";
             using (Stream stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(resourceName))
             {
                 if (stream != null)

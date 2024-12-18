@@ -1,9 +1,7 @@
 # Changes Background  
 $url = "https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg"
 
-
 Invoke-WebRequest $url -OutFile C:\Windows\Temp\black.jpg 
-
 
 $setwallpapersrc = @"
 using System.Runtime.InteropServices;

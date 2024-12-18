@@ -19,10 +19,19 @@ Add-Type -TypeDefinition $setwallpapersrc
 
 [Wallpaper]::SetWallpaper("C:\Windows\Web\Wallpaper\Windows\img0.jpg")
 
-# Undo Name Changes
-Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName { $_.name.substring(0,$_.name.length-7) }
+Remove-Item -Path "C:\Windows\Temp\black.jpg" -Force
 
 # Stop Decrypter
 Stop-Process -Name "Decrypter" -Force
+
+Start-Sleep 2
+
+# Delete Decrypter
+Remove-Item -Path "$HOME\Desktop\Decrypter.exe" -Force
+
+# Undo Name Changes
+Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName { $_.name.substring(0,$_.name.length-7) }
+
+
 
 

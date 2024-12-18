@@ -12,7 +12,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+      <EmbeddedResource Include="img\unlock.png" />
       <EmbeddedResource Include="img\lock.png" />
+      <EmbeddedResource Include="img\background1.png" />
   </ItemGroup>
 
 </Project>
