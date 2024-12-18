@@ -22,3 +22,7 @@ Add-Type -TypeDefinition $setwallpapersrc
 # Undo Name Changes
 Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName { $_.name.substring(0,$_.name.length-7) }
 
+# Stop Decrypter
+Stop-Process -Name "Decrypter" -Force
+
+
