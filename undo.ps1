@@ -16,21 +16,21 @@ public class Wallpaper
 }
 "@
 Add-Type -TypeDefinition $setwallpapersrc
+$windowsPath = [System.Environment]::GetFolderPath("Windows")
+$wallpaperPath = Join-Path -Path $windowsPath -ChildPath "Web\Wallpaper\Windows\img0.jpg"
+[Wallpaper]::SetWallpaper($wallpaperPath)
 
-[Wallpaper]::SetWallpaper("C:\Windows\Web\Wallpaper\Windows\img0.jpg")
-
-Remove-Item -Path "C:\Windows\Temp\black.jpg" -Force
+Remove-Item -Path "$env:TEMP\black.jpg" -Force
 
 # Stop Decrypter
 Stop-Process -Name "Decrypter" -Force
-
 Start-Sleep 2
 
 # Delete Decrypter
 Remove-Item -Path "$HOME\Desktop\Decrypter.exe" -Force
 
 # Undo Name Changes
-Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName { $_.name.substring(0,$_.name.length-7) }
+#Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName { $_.name.substring(0,$_.name.length-7) }
 
 
 

