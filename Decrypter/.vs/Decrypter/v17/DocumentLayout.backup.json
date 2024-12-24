@@ -1,0 +1,91 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Marco\\source\\repos\\Decrypter\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5E301F59-E9A7-4DD4-982C-573484636792}|Decrypter\\Decrypter.csproj|c:\\users\\marco\\source\\repos\\decrypter\\decrypter\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E301F59-E9A7-4DD4-982C-573484636792}|Decrypter\\Decrypter.csproj|solutionrelative:decrypter\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E301F59-E9A7-4DD4-982C-573484636792}|Decrypter\\Decrypter.csproj|C:\\Users\\Marco\\source\\repos\\Decrypter\\decrypter\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5E301F59-E9A7-4DD4-982C-573484636792}|Decrypter\\Decrypter.csproj|solutionrelative:decrypter\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E301F59-E9A7-4DD4-982C-573484636792}|Decrypter\\Decrypter.csproj|C:\\Users\\Marco\\source\\repos\\Decrypter\\decrypter\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E301F59-E9A7-4DD4-982C-573484636792}|Decrypter\\Decrypter.csproj|solutionrelative:decrypter\\mainform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E301F59-E9A7-4DD4-982C-573484636792}|Decrypter\\Decrypter.csproj|C:\\Users\\Marco\\source\\repos\\Decrypter\\decrypter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E301F59-E9A7-4DD4-982C-573484636792}|Decrypter\\Decrypter.csproj|solutionrelative:decrypter\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Mainform.cs",
+              "DocumentMoniker": "C:\\Users\\Marco\\source\\repos\\Decrypter\\Decrypter\\Mainform.cs",
+              "RelativeDocumentMoniker": "Decrypter\\Mainform.cs",
+              "ToolTip": "C:\\Users\\Marco\\source\\repos\\Decrypter\\Decrypter\\Mainform.cs",
+              "RelativeToolTip": "Decrypter\\Mainform.cs",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAAwFsBAABqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T16:08:31.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Mainform.cs [Entwurf]",
+              "DocumentMoniker": "C:\\Users\\Marco\\source\\repos\\Decrypter\\Decrypter\\Mainform.cs",
+              "RelativeDocumentMoniker": "Decrypter\\Mainform.cs",
+              "ToolTip": "C:\\Users\\Marco\\source\\repos\\Decrypter\\Decrypter\\Mainform.cs [Entwurf]",
+              "RelativeToolTip": "Decrypter\\Mainform.cs [Entwurf]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T16:10:10.202Z",
+              "EditorCaption": " [Entwurf]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Marco\\source\\repos\\Decrypter\\Decrypter\\Program.cs",
+              "RelativeDocumentMoniker": "Decrypter\\Program.cs",
+              "ToolTip": "C:\\Users\\Marco\\source\\repos\\Decrypter\\Decrypter\\Program.cs",
+              "RelativeToolTip": "Decrypter\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T16:08:05.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Mainform.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Marco\\source\\repos\\Decrypter\\Decrypter\\Mainform.Designer.cs",
+              "RelativeDocumentMoniker": "Decrypter\\Mainform.Designer.cs",
+              "ToolTip": "C:\\Users\\Marco\\source\\repos\\Decrypter\\Decrypter\\Mainform.Designer.cs",
+              "RelativeToolTip": "Decrypter\\Mainform.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-20T16:07:23.542Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

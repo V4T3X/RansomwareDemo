@@ -1,0 +1,14 @@
+C:\Users\Marco\source\repos\Decrypter\Decrypter\bin\Debug\Decrypter.exe.config
+C:\Users\Marco\source\repos\Decrypter\Decrypter\bin\Debug\Decrypter.exe
+C:\Users\Marco\source\repos\Decrypter\Decrypter\bin\Debug\Decrypter.pdb
+C:\Users\Marco\source\repos\Decrypter\Decrypter\obj\Debug\Decrypter.csproj.AssemblyReference.cache
+C:\Users\Marco\source\repos\Decrypter\Decrypter\obj\Debug\Decrypter.Properties.Resources.resources
+C:\Users\Marco\source\repos\Decrypter\Decrypter\obj\Debug\Decrypter.csproj.GenerateResource.cache
+C:\Users\Marco\source\repos\Decrypter\Decrypter\obj\Debug\Decrypter.csproj.CoreCompileInputs.cache
+C:\Users\Marco\source\repos\Decrypter\Decrypter\obj\Debug\Decrypter.exe
+C:\Users\Marco\source\repos\Decrypter\Decrypter\obj\Debug\Decrypter.pdb
+C:\Users\Marco\source\repos\Decrypter\Decrypter\obj\Debug\Decrypter.Mainform.resources
+C:\Users\Marco\source\repos\Decrypter\Decrypter\bin\Debug\Decrypter.exe.manifest
+C:\Users\Marco\source\repos\Decrypter\Decrypter\bin\Debug\Decrypter.application
+C:\Users\Marco\source\repos\Decrypter\Decrypter\obj\Debug\Decrypter.exe.manifest
+C:\Users\Marco\source\repos\Decrypter\Decrypter\obj\Debug\Decrypter.application
