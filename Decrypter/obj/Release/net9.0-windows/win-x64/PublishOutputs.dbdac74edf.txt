@@ -1,1 +1,0 @@
-C:\Users\Marco\Desktop\RansomwareDemo\Decrypter\bin\Release\net9.0-windows\win-x64\publish\Decrypter.exe
