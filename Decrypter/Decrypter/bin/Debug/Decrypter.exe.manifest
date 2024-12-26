@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Decrypter.exe" size="438168">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Decrypter.exe" size="438680">
       <assemblyIdentity name="Decrypter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GGYCJb51i6P1w/RGBW3St+rp4ZhIAthLVlhjgIRwjzc=</dsig:DigestValue>
+        <dsig:DigestValue>Te12oQQaBcKmgnOTo0QUeOMyYeEOy3c82w9a3uCeVWQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -1,5 +1,5 @@
 # Paths ------------------------
-$tempPath = [System.IO.Path]::Combine([System.Environment]::GetEnvironmentVariable("SystemRoot"), "Temp")
+$tempPath = [System.Environment]::GetEnvironmentVariable("TEMP")
 $privateKeyFolder = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), "Wallpaper")
 $folderToDecrypt = [System.IO.Path]::Combine([System.Environment]::GetFolderPath('Desktop'), "Wallpaper")
 $decrypterFolder = [System.Environment]::GetFolderPath('Desktop')
@@ -106,5 +106,5 @@ Start-Sleep 2
 # Delete the Decrypter executable and cleanup temporary files
 $decrypterPath = Join-Path -Path $decrypterFolder -ChildPath "Decrypter.exe"
 Remove-Item -Path $decrypterPath -Force
-Remove-Item -Path "$tempPath\c.txt" -Force
+Remove-Item -Path "$tempPath\timestamp.txt" -Force
 Remove-Item -Path $encryptedAESKeyPath -Force

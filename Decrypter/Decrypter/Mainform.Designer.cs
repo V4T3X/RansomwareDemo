@@ -117,7 +117,7 @@ namespace Decrypter
             this.deadline.AutoSize = true;
             this.deadline.BackColor = System.Drawing.Color.Transparent;
             this.deadline.Font = new System.Drawing.Font("Microsoft JhengHei UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.deadline.ForeColor = System.Drawing.Color.Firebrick;
+            this.deadline.ForeColor = System.Drawing.Color.Red;
             this.deadline.Location = new System.Drawing.Point(130, 433);
             this.deadline.Name = "deadline";
             this.deadline.Size = new System.Drawing.Size(150, 35);
@@ -264,7 +264,7 @@ namespace Decrypter
             // 
             this.progressBar1.Location = new System.Drawing.Point(445, 844);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(825, 21);
+            this.progressBar1.Size = new System.Drawing.Size(825, 10);
             this.progressBar1.TabIndex = 14;
             this.progressBar1.Visible = false;
             // 
@@ -292,7 +292,7 @@ namespace Decrypter
             this.Controls.Add(this.clock);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "Mainform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
